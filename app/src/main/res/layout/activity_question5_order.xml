@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_header"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subway Sandwich"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <!-- Date and Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_container"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textColor="#555555"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCurrentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DD-MM-YYYY"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   |   "
+                android:textColor="#555555"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                android:textColor="#555555"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HH:MM"
+                android:textColor="#333333"/>
+        </LinearLayout>
+
+        <!-- Customer Name -->
+        <EditText
+            android:id="@+id/etCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Name"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="8dp"
+            android:textColor="#333333"
+            android:textColorHint="#888888"/>
+
+        <!-- Bread Length -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length of Bread"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgBreadLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_container"
+            android:padding="2dp"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/rb15cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 cm"/>
+
+            <RadioButton
+                android:id="@+id/rb30cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 cm"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <!-- Toppings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toppings"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <GridLayout
+            android:id="@+id/glToppings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="@drawable/rounded_container"
+            android:padding="10dp"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/cbPaneer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paneer"/>
+
+            <CheckBox
+                android:id="@+id/cbOnion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onion"
+                android:layout_column="1"/>
+
+            <CheckBox
+                android:id="@+id/cbMushroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mushroom"/>
+
+            <CheckBox
+                android:id="@+id/cbJalapeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jalapeno"
+                android:layout_column="1"/>
+        </GridLayout>
+
+        <!-- Drink -->
+        <AutoCompleteTextView
+            android:id="@+id/actvDrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Drink (e.g., Coke, Pepsi, Fanta)"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textColorHint="#888888"/>
+
+        <!-- Order Button -->
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>

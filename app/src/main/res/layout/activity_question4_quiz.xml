@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Question 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What is the capital of France?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbQ1Option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="London"/>
+            <RadioButton
+                android:id="@+id/rbQ1Option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paris"/>
+            <RadioButton
+                android:id="@+id/rbQ1Option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berlin"/>
+            <RadioButton
+                android:id="@+id/rbQ1Option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Madrid"/>
+        </RadioGroup>
+
+        <!-- Question 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Select the prime numbers:"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbQ2Option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+        <CheckBox
+            android:id="@+id/cbQ2Option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"/>
+        <CheckBox
+            android:id="@+id/cbQ2Option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"/>
+        <CheckBox
+            android:id="@+id/cbQ2Option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Quiz"
+            android:layout_marginTop="24dp"
+            android:onClick="submitQuiz"/>
+    </LinearLayout>
+</ScrollView>
