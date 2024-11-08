@@ -22,6 +22,7 @@ public class Question3Activity extends AppCompatActivity {
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
             url = "http://" + url;
         }
+        // Implicit Intent
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
